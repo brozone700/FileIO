@@ -16,25 +16,33 @@ int main(){
 	std::stringstream ss;
 	inFile.open("data.csv");
 	if (!inFile.is_open()) {
-        	cout << "unable to open file" << endl;
+		cout << "unable to open file" << endl;
 	}
 	string currentLine;
 	while (getline(inFile, currentLine)){
+		//resets the stringstreams
 		ss.clear();
    		ss.str("");
 		ss.str(currentLine);
-    		converter.clear();
-    		converter.str("");
+    	converter.clear();
+    	converter.str("");
+		
 		getline(ss, sx, ',');
-                getline(ss, sy, ',');
+        getline(ss, sy, ',');
 		getline(ss, word);
+		
+		//converts x from str to int
 		converter << sx;
 		converter >> x;
 		converter.clear();
-                converter.str("");
+        converter.str("");
+		
+		//converts y from str to int
 		converter << sy;
 		converter >> y;
 		prntCount = x + y;
+
+		//prints the word prntCount of times
 		for ( int i = 0; i < prntCount; i++){
 			cout << word;
 		}
