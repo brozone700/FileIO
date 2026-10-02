@@ -10,6 +10,8 @@ int y;
 string sx;
 string sy;
 string word;
+string currentLine;
+
 int main(){
 	std::ifstream inFile;
 	std::stringstream converter;
@@ -18,8 +20,10 @@ int main(){
 	if (!inFile.is_open()) {
 		cout << "unable to open file" << endl;
 	}
-	string currentLine;
+	
+	//runs until the program has gone through every line of the file
 	while (getline(inFile, currentLine)){
+		
 		//resets the stringstreams
 		ss.clear();
    		ss.str("");
