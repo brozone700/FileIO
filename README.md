@@ -1,6 +1,6 @@
 # FileIO
 
-'''
+```
 #include <fstream>
 #include <iostream>
 #include <sstream>
@@ -36,4 +36,4 @@ int main(){
     print("\n")
   close file
 }
-'''
+```
